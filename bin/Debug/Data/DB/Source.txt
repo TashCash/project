@@ -1,0 +1,51 @@
+create database FitnesClub;
+use FitnesClub;
+
+create table if not exists Admins
+(
+	Id serial primary key not null,
+	Login varchar(30) not null,
+	Password varchar(30) not null
+);
+
+create table if not exists Clients
+(
+	Id serial primary key not null,
+	Login varchar(30) not null,
+	Password varchar(30) not null,
+	Initials varchar(255) not null,
+	Age int not null,
+	Address varchar(255) not null,
+	Phone varchar(20) not null
+);
+
+create table if not exists Employees
+(
+	Id serial primary key not null,
+	Initials varchar(255) not null,
+	WorkExperience int not null,
+	StartWorkingDate varchar(30) not null,
+	Salary varchar(50) not null,
+	Awards varchar(255) not null
+);
+
+create table if not exists Services
+(
+	Id serial primary key not null,
+	Name varchar(255) not null,
+	Specifications varchar(255) not null,
+	WorkSchedule varchar(255) not null,
+	PeopleCount int not null,
+	Cost varchar(50) not null
+);
+
+
+
+
+
+
+
+
+
+
+
